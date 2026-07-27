@@ -1,0 +1,9 @@
+mouse-scroll-multiplier = 0.8
+
+# Switch back to TokyoNight by swapping these lines
+# theme = TokyoNight
+theme = dark-2026
+
+# Shift+Enter sends esc+CR: multi-line input in Claude Code and other TUI agents
+keybind = shift+enter=text:\x1b\r
+

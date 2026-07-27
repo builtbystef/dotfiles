@@ -1,0 +1,35 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+space"
+previous_agent = "prefix+up" # cycle agents in the agent panel
+next_agent = "prefix+down"
+last_pane = "prefix+space" # jump to last focused pane (tmux "last-window" feel)
+switch_workspace = "prefix+1..9" # jump straight to workspace N (takes numbers from switch_tab)
+
+[ui]
+agent_panel_sort = "spaces"
+
+show_agent_labels_on_pane_borders = false
+[theme]
+# "terminal" follows the host terminal's ANSI palette (ghostty's active theme).
+# Switch back with: name = "tokyo-night"
+name = "terminal"
+auto_switch = false
+
+# The "terminal" base maps surface0 (selected row while cycling workspaces)
+# to "reset" — the plain terminal background — so the selection is invisible.
+# Override the UI tokens with VS Code Dark 2026 values.
+[theme.custom]
+surface0 = "#245C73" # selected workspace row (editor.selectionBackground on bg)
+surface_dim = "#2C2D2E" # active workspace row / separators (list.inactiveSelectionBackground)
+surface1 = "#3A3D3E" # dragged/hover row, one shade lighter
+accent = "#3994BC" # carets, focus borders, picker-overlay selection (focusBorder)
+panel_bg = "#202122" # popup/overlay background (quickInput.background)
+mauve = "#BC8CFF" # branch labels on selected rows
+
+[ui.toast]
+delivery = "herdr"
+
+[ui.sound]
+enabled = false
