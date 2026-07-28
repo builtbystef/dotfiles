@@ -1,0 +1,71 @@
+# Hunk — VS Code "Dark 2026" theme, matching ghostty/nvim/herdr.
+# Base github-dark-default is the same Shiki theme Dark 2026's tokens derive
+# from, so syntax highlighting mostly matches for free.
+#
+# Written for hunk 0.17.6, which only supports the single [custom_theme] table
+# selected by theme = "custom". After upgrading past 0.17.6 this can become a
+# named [themes.dark-2026] table; the syntax_scopes table below is ignored by
+# 0.17.6 and activates on newer versions (dark_plus rules that win in VS Code's
+# include chain 2026-dark -> dark_modern -> dark_plus).
+
+theme = "custom"
+
+[custom_theme]
+base = "github-dark-default"
+label = "Dark 2026"
+
+# Chrome (values shared with ghostty/nvim/herdr configs)
+background = "#121314"          # editor.background (= ghostty bg)
+text = "#BBBEBF"                # editor.foreground
+muted = "#858889"               # editorLineNumber.foreground
+panel = "#191A1B"               # sideBar.background (nvim NeoTree, herdr sidebar)
+panelAlt = "#202122"            # quickInput.background (herdr panel_bg)
+border = "#2C2D2E"              # separators (herdr surface_dim)
+accent = "#3994BC"              # focusBorder (herdr accent)
+accentMuted = "#1F3E4C"         # editorBracketMatch.background on bg
+selectedHunk = "#245C73"        # editor.selectionBackground on bg (nvim Visual, herdr surface0)
+
+# Diff rows: VS Code diffEditor colors (#238636 / #DA3633 / #388BFD) blended
+# onto #121314 at their 0x33/0x4D alphas.
+contextBg = "#121314"
+contextContentBg = "#121314"
+addedBg = "#152A1B"
+addedContentBg = "#17361E"
+removedBg = "#3A1A1A"
+removedContentBg = "#4E1E1D"
+movedAddedBg = "#1A2B43"
+movedRemovedBg = "#1A2B43"
+addedSignColor = "#3FB950"
+removedSignColor = "#F85149"
+lineNumberBg = "#121314"
+lineNumberFg = "#858889"
+
+# File list / badges (VS Code gitDecoration colors)
+badgeAdded = "#3FB950"
+badgeRemoved = "#F85149"
+badgeNeutral = "#858889"
+fileNew = "#3FB950"
+fileUntracked = "#3FB950"
+fileDeleted = "#F85149"
+fileModified = "#D29922"
+fileRenamed = "#79C0FF"
+
+# Agent notes (purple, matching herdr's mauve branch labels)
+noteBorder = "#BC8CFF"
+noteBackground = "#191A1B"
+noteTitleBackground = "#202122"
+noteTitleText = "#BBBEBF"
+
+# Dark 2026 scopes where dark_plus/dark_modern rules beat the GitHub palette.
+# Ignored on 0.17.6; used automatically once hunk > 0.17.6 is installed.
+[custom_theme.syntax_scopes]
+# Control-flow keywords are pink; storage keywords stay GitHub red.
+"keyword.control" = "#C586C0"
+# Types are teal.
+"entity.name.type" = "#4EC9B0"
+"support.class" = "#4EC9B0"
+# Config/data keys are green.
+"support.type.property-name.json" = "#7EE787"
+"entity.name.tag.yaml" = "#7EE787"
+"support.type.property-name.toml" = "#7EE787"
+"keyword.key.toml" = "#7EE787"
