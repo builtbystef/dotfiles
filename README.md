@@ -22,6 +22,10 @@ Requires [GNU Stow](https://www.gnu.org/software/stow/). Stow symlinks each
 package's contents into `$HOME`; it refuses to overwrite existing files, so
 move any pre-existing configs aside first. Undo with `stow -D <package>`.
 
+The `nvim` package started from the [LazyVim starter
+template](https://github.com/LazyVim/starter) — its `LICENSE` (Apache-2.0),
+`README.md`, and `.gitignore` come from there and cover that scaffolding.
+
 ### zsh prerequisites
 
 The `zsh` package is only the config — Oh My Zsh and the Powerlevel10k theme
