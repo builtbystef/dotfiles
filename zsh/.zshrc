@@ -138,3 +138,6 @@ path=(
   /usr/local/go/bin
   "$HOME/go/bin"
 )
+
+# Keep subagents directly under the main agent (no nested spawning)
+export CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1
