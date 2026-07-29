@@ -2,3 +2,5 @@
 # (see lua/plugins/markdownlint.lua).
 # Line-length limits don't suit one-line-per-paragraph prose; GitHub soft-wraps.
 MD013: false
+# Template fragments legitimately start at ## — they're embedded, not standalone.
+MD041: false
