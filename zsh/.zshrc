@@ -141,3 +141,6 @@ path=(
 
 # Keep subagents directly under the main agent (no nested spawning)
 export CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
