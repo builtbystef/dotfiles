@@ -13,6 +13,8 @@
     "typescript",
     "typescriptreact",
   ],
+  // Prettier stays out of projects with no Prettier config.
+  "prettier.requireConfig": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "redhat.telemetry.enabled": false,
@@ -31,10 +33,10 @@
     "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -44,10 +46,12 @@
     },
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
-  "workbench.colorTheme": "Light 2026",
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.views.searchAndCompare.files.layout": "tree",
+  "workbench.colorTheme": "Quiet Light",
 }
