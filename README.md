@@ -9,13 +9,14 @@ Personal configs, themed to match VS Code **Dark 2026** across the whole stack.
 | `herdr` | herdr multiplexer — keybinds + Dark 2026 UI colors (config.toml only; runtime files stay local) |
 | `hunk` | hunk diff viewer — Dark 2026 custom theme (config.toml only; state.json stays local) |
 | `zsh` | zsh shell — Oh My Zsh + Powerlevel10k prompt, deduped `$PATH`, tool loaders (`.zshrc` + `.p10k.zsh`) |
+| `pi` | pi coding agent — Ctrl+Enter / Ctrl+J insert a newline; Enter submits (keybindings.json only; auth and sessions stay local) |
 
 ## Setup
 
 ```sh
 git clone git@github.com:builtbystef/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow --target="$HOME" nvim ghostty herdr hunk zsh   # or just the packages you want
+stow --target="$HOME" nvim ghostty herdr hunk zsh pi   # or just the packages you want
 ```
 
 Requires [GNU Stow](https://www.gnu.org/software/stow/). Stow symlinks each
