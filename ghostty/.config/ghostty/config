@@ -4,6 +4,7 @@ mouse-scroll-multiplier = 0.8
 # theme = TokyoNight
 theme = dark-2026
 
-# Shift+Enter sends esc+CR: multi-line input in Claude Code and other TUI agents
-keybind = shift+enter=text:\x1b\r
+# Shift+Enter as CSI-u so TUI agents (pi, Claude Code) can distinguish it from Enter.
+# The old esc+CR mapping arrived in pi as Alt+Enter (follow-up), not a newline.
+keybind = shift+enter=text:\x1b[13;2u
 
